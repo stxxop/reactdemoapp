@@ -2,6 +2,16 @@
 <html lang="en">
   <head></head>
   <body>
-    <h1>Hi, Jim!</h1>
+    <div id="root"></div>
+    <script type="text/javascript">
+      let today = new Date().toLocaleDateString();
+
+      /* <h1>Hi, Jim! {today}</h1>*/
+
+      let el = document.createElement("h1");
+      el.textContent = `Hi, Jim! ${today}`;
+
+      document.getElementById("root").appendChild(el);
+    </script>
   </body>
 </html>
