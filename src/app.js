@@ -1,17 +1,28 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-const App = () => {
-  let today = new Date().toLocaleDateString();
+/*
+props
+- an object
+    - strings, numbers, objects, functions
+- read-only input
 
+*/
+
+const App = (props) => {
+  const { person, today } = props;
   return (
     <h1>
-      Hi, Jim! {today}
+      Hi, {person.name}! {today}
       <div>Hi again! Hi!</div>
-      <div>Hi again!</div>
     </h1>
   );
 };
 
 const root = createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <App
+    person={{ name: "Beth", age: 24 }}
+    today={new Date().toLocaleDateString()}
+  />
+);

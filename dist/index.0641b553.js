@@ -1010,39 +1010,46 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
-const App = ()=>{
-    let today = new Date().toLocaleDateString();
+/*
+props
+- an object
+    - strings, numbers, objects, functions
+- read-only input
+
+*/ const App = (props)=>{
+    const { person , today  } = props;
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
         children: [
-            "Hi, Jim! ",
+            "Hi, ",
+            person.name,
+            "! ",
             today,
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                 children: "Hi again! Hi!"
             }, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                children: "Hi again!"
-            }, void 0, false, {
-                fileName: "src/app.js",
-                lineNumber: 11,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/app.js",
-        lineNumber: 8,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 };
 _c = App;
 const root = _client.createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {}, void 0, false, {
+root.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
+    person: {
+        name: "Beth",
+        age: 24
+    },
+    today: new Date().toLocaleDateString()
+}, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 17,
-    columnNumber: 13
+    lineNumber: 24,
+    columnNumber: 3
 }, undefined));
 var _c;
 $RefreshReg$(_c, "App");
