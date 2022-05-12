@@ -25297,62 +25297,64 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _gameCss = require("./Game.css");
+var _s = $RefreshSig$();
 /*
 state
 - an object
 - change over time
 - whenever it changes, the component will re-render.
-*/ class Game extends _reactDefault.default.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            score: 0,
-            message: "init",
-            startTime: new Date()
-        };
-    }
-    render() {
-        console.log(this.state);
-        return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            children: [
-                "Game Score: ",
-                this.state.score,
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {}, void 0, false, {
-                    fileName: "src/Game.jsx",
-                    lineNumber: 25,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                    onClick: ()=>{
-                        const newScore = this.state.score + 1;
-                        const newState = {
-                            ...this.state,
-                            score: newScore,
-                            message: "clicked"
-                        };
-                        this.setState(newState);
-                    },
-                    children: "+1"
-                }, void 0, false, {
-                    fileName: "src/Game.jsx",
-                    lineNumber: 26,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/Game.jsx",
-            lineNumber: 23,
-            columnNumber: 7
-        }, this);
-    }
-}
+
+hooks
+- reusable chunks of code
+- Prefixed with "use*"
+
+*/ const Game = ()=>{
+    _s();
+    // Array destrurting.
+    const [score, setScore] = _react.useState(0);
+    const [message, setMessage] = _react.useState("init");
+    const [startTime, setStartTime] = _react.useState(new Date());
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "bold",
+        children: [
+            "Game Score: ",
+            score,
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {}, void 0, false, {
+                fileName: "src/Game.jsx",
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                onClick: ()=>{
+                    const newScore = score + 1;
+                    setScore(newScore);
+                    setMessage("clicked");
+                },
+                children: "+1"
+            }, void 0, false, {
+                fileName: "src/Game.jsx",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/Game.jsx",
+        lineNumber: 24,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Game, "QA2yuQ25qcZR+1OB9oksN6cOtag=");
+_c = Game;
 exports.default = Game;
+var _c;
+$RefreshReg$(_c, "Game");
 
   $parcel$ReactRefreshHelpers$f65e.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","jKwHT","bNKaB"], "bNKaB", "parcelRequire22fa")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Game.css":"eJ18l"}],"eJ18l":[function() {},{}]},["kn9T2","jKwHT","bNKaB"], "bNKaB", "parcelRequire22fa")
 
 //# sourceMappingURL=index.0641b553.js.map
