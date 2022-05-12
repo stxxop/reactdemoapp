@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
-  </head>
+  <head></head>
   <body>
     <div id="root"></div>
-    <script type="text/babel">
-      let today = new Date().toLocaleDateString();
-
-      let jsx = (
-        <h1>
-          Hi, Jim! {today}
-          <div>Hi again!</div>
-          <div>Hi again!</div>
-        </h1>
-      );
-
-      ReactDOM.render(jsx, document.getElementById("root"));
-
-      //document.getElementById("root").appendChild(el);
-    </script>
+    <script src="./app.js" type="module"></script>
   </body>
 </html>
