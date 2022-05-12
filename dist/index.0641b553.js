@@ -1010,12 +1010,18 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
+var _game = require("./Game");
+var _gameDefault = parcelHelpers.interopDefault(_game);
 /*
 props
 - an object
     - strings, numbers, objects, functions
 - read-only input
 
+
+Two types of components:
+- Functional Components
+- Class Components
 */ const App = (props)=>{
     const { person , today  } = props;
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
@@ -1025,16 +1031,20 @@ props
             "! ",
             today,
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                children: "Hi again! Hi!"
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_gameDefault.default, {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 23,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 17,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/app.js",
-        lineNumber: 15,
+        lineNumber: 20,
         columnNumber: 5
     }, undefined);
 };
@@ -1048,7 +1058,7 @@ root.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(App, {
     today: new Date().toLocaleDateString()
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 24,
+    lineNumber: 31,
     columnNumber: 3
 }, undefined));
 var _c;
@@ -1059,7 +1069,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-dom/client":"lOjBx"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-dom/client":"lOjBx","./Game":"25SvZ"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -25275,6 +25285,74 @@ module.exports = require('./cjs/scheduler.development.js');
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === 'function') __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}]},["kn9T2","jKwHT","bNKaB"], "bNKaB", "parcelRequire22fa")
+},{}],"25SvZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f65e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f65e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+/*
+state
+- an object
+- change over time
+- whenever it changes, the component will re-render.
+*/ class Game extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            score: 0,
+            message: "init",
+            startTime: new Date()
+        };
+    }
+    render() {
+        console.log(this.state);
+        return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            children: [
+                "Game Score: ",
+                this.state.score,
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {}, void 0, false, {
+                    fileName: "src/Game.jsx",
+                    lineNumber: 25,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                    onClick: ()=>{
+                        const newScore = this.state.score + 1;
+                        const newState = {
+                            ...this.state,
+                            score: newScore,
+                            message: "clicked"
+                        };
+                        this.setState(newState);
+                    },
+                    children: "+1"
+                }, void 0, false, {
+                    fileName: "src/Game.jsx",
+                    lineNumber: 26,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/Game.jsx",
+            lineNumber: 23,
+            columnNumber: 7
+        }, this);
+    }
+}
+exports.default = Game;
+
+  $parcel$ReactRefreshHelpers$f65e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","jKwHT","bNKaB"], "bNKaB", "parcelRequire22fa")
 
 //# sourceMappingURL=index.0641b553.js.map

@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import Game from "./Game";
 
 /*
 props
@@ -7,6 +8,10 @@ props
     - strings, numbers, objects, functions
 - read-only input
 
+
+Two types of components:
+- Functional Components
+- Class Components
 */
 
 const App = (props) => {
@@ -14,7 +19,9 @@ const App = (props) => {
   return (
     <h1>
       Hi, {person.name}! {today}
-      <div>Hi again! Hi!</div>
+      <div>
+        <Game />
+      </div>
     </h1>
   );
 };
